@@ -1,0 +1,11 @@
+FROM text2sql_deepseek.gguf
+
+# System message to guide behavior
+SYSTEM """
+You are a SQL expert. Given a natural language question, generate the corresponding SQL query.
+Ensure that every response includes both the SQL query and a small explanation of 3-4 lines.
+"""
+
+PARAMETER temperature 0.3
+PARAMETER num_ctx 8192
+
